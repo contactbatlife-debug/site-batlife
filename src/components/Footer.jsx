@@ -10,7 +10,6 @@ export default function Footer() {
       </div>
             <div className="flex items-center justify-center gap-5 mb-4 text-sm">
         <a href="https://linktr.ee/batlife.app" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent-green)" }}>Linktree</a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent-cyan)" }}>LinkedIn</a>
         <a href="https://www.instagram.com/batlife.app" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent-purple)" }}>Instagram</a>
         <a href="mailto:contact.batlife@gmail.com" style={{ color: "var(--text-secondary)" }}>Contact</a>
       </div>
