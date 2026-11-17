@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Routes, Route, useLocation, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import Article from "./pages/Article";
@@ -37,6 +38,7 @@ export default function App() {
       </div>
 
       <ScrollToTop />
+      <SEO />
       <Navbar />
       <main className="relative flex-1 w-full max-w-3xl mx-auto px-4 pt-8">
         <Routes>

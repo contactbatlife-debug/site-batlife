@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 
 export function formatDate(date) {
-  return new Date(date).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+  // "T12:00:00" évite le décalage d'un jour dans les fuseaux derrière UTC
+  // (new Date("2026-11-15") = minuit UTC → affichait "14 novembre" en Amérique).
+  return new Date(`${date}T12:00:00`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
 }
 
 export default function ArticleCard({ article, delay = 0 }) {
