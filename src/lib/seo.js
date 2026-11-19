@@ -45,9 +45,11 @@ export function headForRoute(pathname) {
     },
   };
 
+  // 1. Page d'accueil
   if (path === "/") return base;
 
-  if (path === "/blog") {
+  // 2. Page de liste des articles (anciennement /blog, maintenant /articles)
+  if (path === "/articles") {
     const title = `Blog : guides batterie VAE & trottinette | ${SITE.name}`;
     const description =
       "Tutoriels et conseils d'entretien pour prolonger la durée de vie de votre batterie : hivernage, calibration, SoH, installation de l'app.";
@@ -67,15 +69,18 @@ export function headForRoute(pathname) {
           .map((a) => ({
             "@type": "BlogPosting",
             headline: a.title,
-            url: abs(`/blog/${a.slug}`),
+            url: abs(`/${a.slug}`), // ✅ Correction : plus de /blog/
             datePublished: a.date,
           })),
       },
     };
   }
 
-  const match = path.match(/^\/blog\/([^/]+)$/);
-  const article = match && articles.find((a) => a.slug === match[1]);
+  // 3. Page d'article individuel
+  // On extrait le slug (tout ce qui est après le premier /)
+  const slug = path.startsWith("/") ? path.substring(1) : path;
+  const article = articles.find((a) => a.slug === slug);
+
   if (article) {
     return {
       ...base,
@@ -98,12 +103,12 @@ export function headForRoute(pathname) {
           name: SITE.name,
           logo: { "@type": "ImageObject", url: abs("/favicon.svg") },
         },
-        mainEntityOfPage: canonical,
+        mainEntityOfPage: canonical, // ✅ La canonical pointe maintenant sur la bonne URL
       },
     };
   }
 
-  // Route inconnue → page 404 (non indexable)
+  // 4. Route inconnue → page 404 (non indexable)
   return {
     ...base,
     title: `Page introuvable | ${SITE.name}`,
