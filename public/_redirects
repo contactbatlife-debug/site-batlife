@@ -1,0 +1,11 @@
+# Redirections 301 (permanentes) pour préserver le SEO acquis
+/blog /articles 301
+/blog/batterie-vae-se-decharge-toute-seule /batterie-vae-se-decharge-toute-seule 301
+/blog/duree-vie-batterie-vae /duree-vie-batterie-vae 301
+/blog/installer-batlife-iphone-android /installer-batlife-iphone-android 301
+/blog/calibrer-sa-batterie-vae /calibrer-sa-batterie-vae 301
+/blog/hivernage-batterie-vae /hivernage-batterie-vae 301
+/blog/comprendre-le-soh /comprendre-le-soh 301
+
+# Règle générique de secours pour tout futur article
+/blog/* /:splat 301
