@@ -43,8 +43,8 @@ export default function App() {
       <main className="relative flex-1 w-full max-w-3xl mx-auto px-4 pt-8">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<Article />} />
+          <Route path="/articles" element={<Blog />} />
+          <Route path="/:slug" element={<Article />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

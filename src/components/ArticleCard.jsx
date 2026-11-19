@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 export function formatDate(date) {
   // "T12:00:00" évite le décalage d'un jour dans les fuseaux derrière UTC
-  // (new Date("2026-11-15") = minuit UTC → affichait "14 novembre" en Amérique).
   return new Date(`${date}T12:00:00`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
 }
 
 export default function ArticleCard({ article, delay = 0 }) {
   return (
-    <Link to={`/blog/${article.slug}`}
+    // ✅ Correction : suppression de "/blog/" dans le lien
+    <Link to={`/${article.slug}`}
       className="block rounded-2xl p-4 transition-all hover:-translate-y-0.5 fade-up"
       style={{
         background: "var(--bg-card)", border: "var(--border-card)", borderTop: "var(--border-top)",

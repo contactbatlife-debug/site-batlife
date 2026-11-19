@@ -68,7 +68,8 @@ export default function Article() {
       <div className="text-center py-20">
         <div className="text-4xl mb-4">🔍</div>
         <p className="text-sm mb-6" style={{ color: "var(--text-secondary)" }}>Cet article n'existe pas.</p>
-        <Link to="/blog" className="text-sm font-semibold" style={{ color: "var(--accent-cyan)" }}>← Retour au blog</Link>
+        {/* ✅ Correction : retour vers /articles au lieu de /blog */}
+        <Link to="/articles" className="text-sm font-semibold" style={{ color: "var(--accent-cyan)" }}>← Tous les articles</Link>
       </div>
     );
   }
@@ -90,7 +91,8 @@ export default function Article() {
         <div className="h-full transition-[width] duration-150" style={{ width: `${progress}%`, background: "linear-gradient(90deg,#38bdf8,#818cf8,#4ade80)" }} />
       </div>
 
-      <Link to="/blog" className="inline-block text-sm mb-6 fade-up" style={{ color: "var(--accent-cyan)" }}>← Tous les articles</Link>
+      {/* ✅ Correction : retour vers /articles au lieu de /blog */}
+      <Link to="/articles" className="inline-block text-sm mb-6 fade-up" style={{ color: "var(--accent-cyan)" }}>← Tous les articles</Link>
 
       <header className="mb-6 fade-up" style={{ animationDelay: "60ms" }}>
         <div className="flex items-center gap-2 mb-3">

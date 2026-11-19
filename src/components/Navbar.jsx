@@ -14,7 +14,7 @@ export default function Navbar() {
         </Link>
         <nav className="flex items-center gap-4 text-sm">
           <Link to="/" style={{ color: "var(--text-secondary)" }}>Accueil</Link>
-          <Link to="/blog" style={{ color: "var(--text-secondary)" }}>Blog</Link>
+          <Link to="/articles" style={{ color: "var(--text-secondary)" }}>Blog</Link>
           <a href="https://batlife.app" target="_blank" rel="noopener noreferrer"
             className="px-3 py-1.5 rounded-lg font-semibold"
             style={{ background: "linear-gradient(135deg,rgba(56,189,248,0.2),rgba(99,102,241,0.15))", border: "0.5px solid rgba(56,189,248,0.4)", color: "var(--accent-cyan)" }}>
