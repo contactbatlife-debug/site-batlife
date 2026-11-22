@@ -74,6 +74,8 @@ const vite = await createServer({
 const { render } = await vite.ssrLoadModule("/src/entry-server.jsx");
 
 // ✅ Correction : /articles et /:slug (plus de /blog/)
+// ✅ Routes avec le préfixe /fr/
+// ✅ Retour à la normale : routes à la racine
 const routes = ["/", "/articles", ...articles.map((a) => `/${a.slug}`)];
 for (const route of routes) {
   const head = headForRoute(route);
@@ -103,7 +105,7 @@ const rss = `<?xml version="1.0" encoding="UTF-8"?>
     <language>fr-FR</language>
     <lastBuildDate>${new Date(sorted[0].date + "T12:00:00Z").toUTCString()}</lastBuildDate>
 ${sorted
-  .map(
+      .map(
     (a) => `    <item>
       <title>${escXml(a.title)}</title>
       <link>${SITE.url}/${a.slug}</link>

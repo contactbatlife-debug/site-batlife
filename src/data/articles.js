@@ -3,6 +3,8 @@
 
 const articles = [
   {
+    id: "decharge-seule",
+    lang: "fr", 
     slug: "batterie-vae-se-decharge-toute-seule",
     title: "Batterie de vélo électrique qui se décharge toute seule : causes et solutions",
     description: "Votre batterie de VAE se vide à l'arrêt, entre deux sorties ? Voici les pertes normales, les causes anormales, et la méthode simple pour les distinguer.",
@@ -52,6 +54,8 @@ const articles = [
     ],
   },
   {
+    id: "duree-vie",
+    lang: "fr", 
     slug: "duree-vie-batterie-vae",
     title: "Durée de vie d'une batterie de vélo électrique : ce qui l'use vraiment",
     description: "Combien d'années et de cycles espérer d'une batterie de VAE ? Ce qui l'use au quotidien, les signes d'usure, et comment repousser le remplacement.",
@@ -103,6 +107,8 @@ const articles = [
     ],
   },
   {
+    id: "installation" ,
+    lang: "fr",
     slug: "installer-batlife-iphone-android",
     title: "Installer BatLife sur iPhone et Android : le guide complet",
     description: "BatLife fonctionne sur iPhone, Android et ordinateur. Voici comment l'installer en moins d'une minute, sans passer par l'App Store.",
@@ -141,6 +147,8 @@ const articles = [
     ],
   },
   {
+    id: "calibration" ,
+    lang: "fr" ,
     slug: "calibrer-sa-batterie-vae",
     title: "Calibrer sa batterie VAE : le guide complet",
     description: "Pourquoi votre indicateur de charge dérive, et comment le recalibrer simplement en 4 étapes.",
@@ -166,6 +174,8 @@ const articles = [
     ],
   },
   {
+    id: "hivernage" ,
+    lang: "fr" ,
     slug: "hivernage-batterie-vae",
     title: "Hivernage : conserver sa batterie pendant l'hiver",
     description: "Niveau de charge, température, fréquence de vérification : les bons réflexes pour retrouver une batterie saine au printemps. Nouveau : BatLife calcule votre temps de charge d'hivernage.",
@@ -199,6 +209,8 @@ const articles = [
     ],
   },
   {
+    id: "soh" ,
+    lang: "fr" ,
     slug: "comprendre-le-soh",
     title: "Comprendre le SoH : l'indice de santé de votre batterie",
     description: "Ce que mesure le SoH, comment BatLife l'estime, et pourquoi c'est utile pour la revente de votre vélo.",
