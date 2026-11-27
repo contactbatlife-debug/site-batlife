@@ -112,7 +112,7 @@ export default function Home() {
       <section>
         <div className="flex items-center justify-between mb-4 fade-up">
           <h2 className="text-lg font-bold" style={{ color: "var(--text-primary)" }}>Derniers articles</h2>
-          <Link to="/blog" className="text-sm font-semibold" style={{ color: "var(--accent-cyan)" }}>Tout le blog →</Link>
+          <Link to="/articles" className="text-sm font-semibold" style={{ color: "var(--accent-cyan)" }}>Tout le blog →</Link>
         </div>
         <div className="grid sm:grid-cols-2 gap-3">
           {latest.map((a, i) => <ArticleCard key={a.slug} article={a} delay={i * 60} />)}
