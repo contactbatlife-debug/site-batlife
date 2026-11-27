@@ -2,6 +2,87 @@
 // { type: "video", videoId: "ID_YOUTUBE", title: "Titre de la vidéo" }
 
 const articles = [
+      {
+    id: "batterie-vae-occasion",
+    lang: "fr",
+    slug: "verifier-batterie-vae-occasion",
+    title: "Comment vérifier l'état d'une batterie VAE d'occasion avant d'acheter ?",
+    description: "Acheter une batterie de vélo électrique d'occasion ? Voici les 4 tests indispensables pour vérifier son état et négocier le bon prix.",
+    date: "2026-11-28",
+    readTime: 4,
+    category: "Tutoriels",
+    icon: "🔍",
+    content: [
+      { type: "p", text: "Acheter un vélo électrique d'occasion est une excellente affaire, mais la batterie représente souvent 30 à 50 % de la valeur du vélo. Une batterie usée peut coûter plus cher que l'économie réalisée. Voici 4 étapes concrètes pour éviter les mauvaises surprises." },
+      { type: "h2", text: "1. L'inspection visuelle (les signes qui ne trompent pas)" },
+      { type: "p", text: "Avant même de parler technique, observez le boîtier. Certains défauts physiques sont des signaux d'alarme immédiats." },
+      { type: "list", items: [
+        "Gonflement ou déformation du boîtier : signe de cellules endommagées ou de gaz interne. Fuyez.",
+        "Corrosion sur les connecteurs : indique une exposition à l'humidité et une possible oxydation des circuits.",
+        "Chocs importants ou fissures : un impact violent a pu endommager le BMS (Battery Management System)."
+      ]},
+      { type: "h2", text: "2. Le test de la tension au repos" },
+      { type: "p", text: "Le pourcentage affiché sur l'écran du vélo est souvent une estimation peu fiable. Pour un vrai diagnostic :" },
+      { type: "list", items: [
+        "Laissez la batterie reposer au moins 2 heures après une charge ou une utilisation.",
+        "Si vous avez un multimètre, mesurez la tension aux bornes.",
+        "Une chute de tension trop rapide par rapport aux spécifications du constructeur indique des cellules fatiguées."
+      ]},
+      { type: "h2", text: "3. Le test sous charge (le test de vérité)" },
+      { type: "p", text: "Une batterie peut afficher 100 % au repos, mais s'effondrer dès que le moteur tire." },
+      { type: "list", items: [
+        "Faites un essai de 10 à 15 minutes en montée ou avec une assistance élevée.",
+        "Si l'autonomie affichée chute brutalement (ex: de 80 % à 40 % en quelques minutes), le SoH est probablement bas.",
+        "Écoutez le moteur : des coupures de puissance soudaines trahissent un BMS qui protège des cellules faibles."
+      ]},
+      { type: "h2", text: "4. Votre atout négociation : l'historique BatLife" },
+      { type: "p", text: "Ne vous fiez pas uniquement aux dires du vendeur. La transparence est la clé :" },
+      { type: "list", items: [
+        "Si le vendeur utilise déjà BatLife : Demandez-lui de vous montrer son historique ou d'exporter son certificat PDF. C'est la preuve ultime qu'il a bien entretenu sa batterie.",
+        "S'il n'a pas de suivi : Configurez la batterie dans votre propre application BatLife en sélectionnant l'état déclaré par le vendeur (par exemple « Usagée 80 % »). Faites un premier relevé avant l'achat.",
+        "Si après quelques jours d'utilisation la batterie se décharge beaucoup plus vite que ce que l'app prévoit, vous avez un début de preuve objective pour renégocier le prix ou demander une garantie."
+      ]},
+      { type: "tip", text: "Une batterie dont le vendeur peut prouver l'entretien via un suivi régulier (comme le certificat PDF de BatLife) est un gage de confiance majeur. À l'inverse, un vendeur qui refuse de laisser tester la batterie doit vous mettre la puce à l'oreille." },
+      { type: "warning", text: "Si le vendeur vous presse de conclure la vente sans essai ou refuse catégoriquement que vous testiez la batterie, c'est un signal d'alarme majeur. Passez votre chemin." }
+    ]
+  },
+  {
+    id: "consommation-wh-km",
+    lang: "fr",
+    slug: "consommation-batterie-vae-wh-km",
+    title: "Comment suivre et réduire sa consommation en Wh/km sur son VAE ?",
+    description: "Apprenez à calculer et optimiser votre consommation en Wh/km. Conseils pratiques pour prolonger l'autonomie de votre batterie VAE et suivi gratuit avec BatLife.",
+    date: "2026-11-28",
+    readTime: 5,
+    category: "Comprendre",
+    icon: "⚡",
+    content: [
+      { type: "p", text: "Connaître sa consommation réelle en Watt-heure par kilomètre (Wh/km), c'est comme connaître la consommation en litres aux 100 km pour une voiture. C'est l'indicateur clé pour comprendre l'état de santé de votre batterie et adapter votre pilotage." },
+      { type: "h2", text: "Qu'est-ce que le Wh/km et comment le calculer ?" },
+      { type: "p", text: "Le Wh/km mesure l'énergie dépensée pour parcourir un kilomètre. Une consommation moyenne se situe entre 10 et 15 Wh/km pour un VAE bien réglé. Au-delà de 20 Wh/km, il y a une marge d'optimisation." },
+      { type: "list", items: [
+        "Formule simple : (Capacité de la batterie en Wh × % de batterie utilisé) / Distance parcourue en km.",
+        "Exemple : Vous utilisez 250 Wh pour faire 10 km. Votre consommation est de 25 Wh/km.",
+        "Une hausse progressive de ce chiffre sur plusieurs mois est souvent le premier signe que le SoH de votre batterie diminue."
+      ]},
+      { type: "h2", text: "Les 4 facteurs qui font exploser votre consommation" },
+      { type: "list", items: [
+        "La pression des pneus : Des pneus sous-gonflés augmentent la résistance au roulement. Vérifiez la pression chaque semaine (cause n°1 de surconsommation).",
+        "Le poids total : Chaque kilo supplémentaire (sac à dos, bagages) demande plus d'énergie, surtout en côte.",
+        "Le style de pilotage : Les démarrages brusques et les freinages suivis de ré-accélérations consomment beaucoup plus qu'une vitesse constante.",
+        "Le niveau d'assistance : Passer du mode « Eco » au mode « Turbo » peut doubler votre consommation instantanée."
+      ]},
+      { type: "h2", text: "Comment mesurer votre consommation réelle avec BatLife" },
+      { type: "p", text: "Il est fastidieux de faire ce calcul à la main après chaque sortie. BatLife automatise ce suivi pour vous :" },
+      { type: "list", items: [
+        "Saisissez vos données : Après votre trajet, entrez la distance et le niveau de batterie utilisé dans l'app.",
+        "Calcul automatique : BatLife calcule instantanément votre consommation en Wh/km.",
+        "Suivi dans le temps : Grâce à l'export CSV, vous pouvez suivre l'évolution de votre consommation mois après mois."
+      ]},
+      { type: "tip", text: "Faites un test de consommation avec des pneus bien gonflés et en mode Eco. Vous serez surpris de l'autonomie supplémentaire que vous pouvez gagner sans changer de batterie." },
+      { type: "warning", text: "Ne comparez pas votre consommation avec celle des autres sans prendre en compte le relief, votre poids et la météo. Comparez-vous à vous-même sur le même trajet." }
+    ]
+  },
   {
     id: "decharge-seule",
     lang: "fr", 
