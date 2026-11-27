@@ -2,7 +2,7 @@
 // { type: "video", videoId: "ID_YOUTUBE", title: "Titre de la vidéo" }
 
 const articles = [
-      {
+        {
     id: "batterie-vae-occasion",
     lang: "fr",
     slug: "verifier-batterie-vae-occasion",
@@ -32,25 +32,25 @@ const articles = [
       { type: "p", text: "Une batterie peut afficher 100 % au repos, mais s'effondrer dès que le moteur tire." },
       { type: "list", items: [
         "Faites un essai de 10 à 15 minutes en montée ou avec une assistance élevée.",
-        "Si l'autonomie affichée chute brutalement (ex: de 80 % à 40 % en quelques minutes), le SoH est probablement bas.",
+        "Si l'autonomie affichée chute brutalement (par exemple de 80 % à 40 % en quelques minutes), le SoH est probablement bas.",
         "Écoutez le moteur : des coupures de puissance soudaines trahissent un BMS qui protège des cellules faibles."
       ]},
-      { type: "h2", text: "4. Votre atout négociation : l'historique BatLife" },
-      { type: "p", text: "Ne vous fiez pas uniquement aux dires du vendeur. La transparence est la clé :" },
+      { type: "h2", text: "4. L'historique de suivi : votre meilleur argument" },
+      { type: "p", text: "Ne vous fiez pas uniquement aux dires du vendeur. La transparence est la clé." },
       { type: "list", items: [
-        "Si le vendeur utilise déjà BatLife : Demandez-lui de vous montrer son historique ou d'exporter son certificat PDF. C'est la preuve ultime qu'il a bien entretenu sa batterie.",
-        "S'il n'a pas de suivi : Configurez la batterie dans votre propre application BatLife en sélectionnant l'état déclaré par le vendeur (par exemple « Usagée 80 % »). Faites un premier relevé avant l'achat.",
-        "Si après quelques jours d'utilisation la batterie se décharge beaucoup plus vite que ce que l'app prévoit, vous avez un début de preuve objective pour renégocier le prix ou demander une garantie."
+        "Si le vendeur utilise une application de suivi de batterie : demandez-lui de vous montrer son historique ou d'exporter un certificat. C'est la preuve qu'il a réellement entretenu sa batterie.",
+        "S'il n'a pas de suivi : notez l'état qu'il déclare (par exemple « usagée à 80 % ») et faites un premier relevé vous-même avant l'achat, avec une application comme BatLife.",
+        "Si, après quelques jours d'utilisation, la batterie se décharge beaucoup plus vite que prévu : vous avez un début de preuve objective pour renégocier le prix ou demander une garantie."
       ]},
-      { type: "tip", text: "Une batterie dont le vendeur peut prouver l'entretien via un suivi régulier (comme le certificat PDF de BatLife) est un gage de confiance majeur. À l'inverse, un vendeur qui refuse de laisser tester la batterie doit vous mettre la puce à l'oreille." },
-      { type: "warning", text: "Si le vendeur vous presse de conclure la vente sans essai ou refuse catégoriquement que vous testiez la batterie, c'est un signal d'alarme majeur. Passez votre chemin." }
+      { type: "tip", text: "Une batterie dont le vendeur peut prouver l'entretien via un suivi régulier est un gage de confiance majeur. À l'inverse, un vendeur qui refuse de laisser tester la batterie doit vous mettre la puce à l'oreille." },
+      { type: "warning", text: "Si le vendeur vous presse de conclure la vente sans essai, ou refuse catégoriquement que vous testiez la batterie, c'est un signal d'alarme majeur. Passez votre chemin." }
     ]
   },
   {
     id: "consommation-wh-km",
     lang: "fr",
     slug: "consommation-batterie-vae-wh-km",
-    title: "Comment suivre et réduire sa consommation en Wh/km sur son VAE ?",
+    title: "Wh/km : comment mesurer et réduire sa consommation sur un VAE  ?",
     description: "Apprenez à calculer et optimiser votre consommation en Wh/km. Conseils pratiques pour prolonger l'autonomie de votre batterie VAE et suivi gratuit avec BatLife.",
     date: "2026-11-28",
     readTime: 5,
