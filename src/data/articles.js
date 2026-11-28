@@ -22,7 +22,7 @@ const articles = [
         "Chocs importants ou fissures : un impact violent a pu endommager le BMS (Battery Management System)."
       ]},
       { type: "h2", text: "2. Le test de la tension au repos" },
-      { type: "p", text: "Le pourcentage affiché sur l'écran du vélo est souvent une estimation peu fiable. Pour un vrai diagnostic :" },
+      { type: "p", text: "Le pourcentage affiché sur l'écran du vélo est souvent une estimation peu fiable. Pour un vrai diagnostic, vous pouvez aussi recalibrer la jauge si elle semble incohérente (voir notre guide de calibration)." },
       { type: "list", items: [
         "Laissez la batterie reposer au moins 2 heures après une charge ou une utilisation.",
         "Si vous avez un multimètre, mesurez la tension aux bornes.",
@@ -42,6 +42,7 @@ const articles = [
         "S'il n'a pas de suivi : notez l'état qu'il déclare (par exemple « usagée à 80 % ») et faites un premier relevé vous-même avant l'achat, avec une application comme BatLife.",
         "Si, après quelques jours d'utilisation, la batterie se décharge beaucoup plus vite que prévu : vous avez un début de preuve objective pour renégocier le prix ou demander une garantie."
       ]},
+      { type: "tip", text: "Pour comprendre comment est calculé l'état de santé d'une batterie, consultez notre guide sur le SoH (State of Health)." },
       { type: "tip", text: "Une batterie dont le vendeur peut prouver l'entretien via un suivi régulier est un gage de confiance majeur. À l'inverse, un vendeur qui refuse de laisser tester la batterie doit vous mettre la puce à l'oreille." },
       { type: "warning", text: "Si le vendeur vous presse de conclure la vente sans essai, ou refuse catégoriquement que vous testiez la batterie, c'est un signal d'alarme majeur. Passez votre chemin." }
     ]
@@ -66,7 +67,7 @@ const articles = [
         "Major impacts or cracks: a violent shock may have damaged the BMS (Battery Management System)."
       ]},
       { type: "h2", text: "2. The resting voltage test" },
-      { type: "p", text: "The percentage displayed on the bike's screen is often an unreliable estimate. For a real diagnosis:" },
+      { type: "p", text: "The percentage displayed on the bike's screen is often an unreliable estimate. For a real diagnosis, you can also recalibrate the gauge if it seems inconsistent (see our calibration guide)." },
       { type: "list", items: [
         "Let the battery rest for at least 2 hours after charging or use.",
         "If you have a multimeter, measure the voltage at the terminals.",
@@ -86,6 +87,7 @@ const articles = [
         "If they have no tracking: note the condition they claim (e.g., 'used at 80%') and take a first reading yourself before buying, using an app like BatLife.",
         "If, after a few days of use, the battery drains much faster than expected: you have objective grounds to renegotiate the price or ask for a warranty."
       ]},
+      { type: "tip", text: "To understand how a battery's health is calculated, check out our guide on SoH (State of Health)." },
       { type: "tip", text: "A battery whose seller can prove maintenance via regular tracking is a major trust factor. Conversely, a seller who refuses to let you test the battery should raise a red flag." },
       { type: "warning", text: "If the seller pressures you to close the deal without a test, or flat out refuses to let you test the battery, it's a major warning sign. Walk away." }
     ]
@@ -101,7 +103,7 @@ const articles = [
     category: "Understanding",
     icon: "⚡",
     content: [
-      { type: "p", text: "Knowing your actual consumption in Watt-hours per kilometer (Wh/km) is like knowing the liters per 100 km for a car. It's the key indicator to understand your battery's health and adapt your riding style." },
+      { type: "p", text: "Knowing your actual consumption in Watt-hours per kilometer (Wh/km) is like knowing the liters per 100 km for a car. It's the key indicator to understand your battery's health and adapt your riding style. High consumption also accelerates battery wear (see our guide on lifespan)." },
       { type: "h2", text: "What is Wh/km and how to calculate it?" },
       { type: "p", text: "Wh/km measures the energy spent to travel one kilometer. An average consumption is between 10 and 15 Wh/km for a well-tuned e-bike. Above 20 Wh/km, there is room for optimization." },
       { type: "list", items: [
@@ -138,7 +140,7 @@ const articles = [
     category: "Comprendre",
     icon: "⚡",
     content: [
-      { type: "p", text: "Connaître sa consommation réelle en Watt-heure par kilomètre (Wh/km), c'est comme connaître la consommation en litres aux 100 km pour une voiture. C'est l'indicateur clé pour comprendre l'état de santé de votre batterie et adapter votre pilotage." },
+      { type: "p", text: "Connaître sa consommation réelle en Watt-heure par kilomètre (Wh/km), c'est comme connaître la consommation en litres aux 100 km pour une voiture. C'est l'indicateur clé pour comprendre l'état de santé de votre batterie et adapter votre pilotage. Une consommation élevée accélère aussi l'usure de la batterie (voir notre guide sur la durée de vie)." },
       { type: "h2", text: "Qu'est-ce que le Wh/km et comment le calculer ?" },
       { type: "p", text: "Le Wh/km mesure l'énergie dépensée pour parcourir un kilomètre. Une consommation moyenne se situe entre 10 et 15 Wh/km pour un VAE bien réglé. Au-delà de 20 Wh/km, il y a une marge d'optimisation." },
       { type: "list", items: [

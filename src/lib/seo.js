@@ -19,9 +19,29 @@ export const SITE = {
 
 const abs = (p) => new URL(p, SITE.url).href;
 
+// ➕ NOUVEAU : Correspondance entre les slugs FR et EN pour les balises hreflang
+const slugTranslations = {
+  "batterie-vae-se-decharge-toute-seule": "ebike-battery-drains-itself",
+  "ebike-battery-drains-itself": "batterie-vae-se-decharge-toute-seule",
+  "verifier-batterie-vae-occasion": "check-used-ebike-battery",
+  "check-used-ebike-battery": "verifier-batterie-vae-occasion",
+  "consommation-batterie-vae-wh-km": "measure-reduce-ebike-wh-km-consumption",
+  "measure-reduce-ebike-wh-km-consumption": "consommation-batterie-vae-wh-km",
+  "duree-vie-batterie-vae": "ebike-battery-lifespan",
+  "ebike-battery-lifespan": "duree-vie-batterie-vae",
+  "installer-batlife-iphone-android": "install-batlife-iphone-android",
+  "install-batlife-iphone-android": "installer-batlife-iphone-android",
+  "calibrer-sa-batterie-vae": "calibrate-ebike-battery",
+  "calibrate-ebike-battery": "calibrer-sa-batterie-vae",
+  "hivernage-batterie-vae": "ebike-battery-winter-storage",
+  "ebike-battery-winter-storage": "hivernage-batterie-vae",
+  "comprendre-le-soh": "understand-ebike-battery-soh",
+  "understand-ebike-battery-soh": "comprendre-le-soh",
+};
+
 /**
  * Retourne les métadonnées complètes d'une route (chemin sans origine).
- * { title, description, canonical, robots, ogType, image, publishedTime, jsonld }
+ * { title, description, canonical, robots, ogType, image, publishedTime, alternates, jsonld }
  */
 export function headForRoute(pathname) {
   const path = pathname.replace(/\/+$/, "") || "/";
@@ -35,6 +55,7 @@ export function headForRoute(pathname) {
     ogType: "website",
     image: abs(SITE.defaultImage),
     publishedTime: null,
+    alternates: [], // ➕ NOUVEAU
     jsonld: {
       "@context": "https://schema.org",
       "@type": "WebSite",
@@ -48,7 +69,7 @@ export function headForRoute(pathname) {
   // 1. Page d'accueil
   if (path === "/") return base;
 
-  // 2. Page de liste des articles (anciennement /blog, maintenant /articles)
+  // 2. Page de liste des articles
   if (path === "/articles") {
     const title = `Blog : guides batterie VAE & trottinette | ${SITE.name}`;
     const description =
@@ -69,7 +90,7 @@ export function headForRoute(pathname) {
           .map((a) => ({
             "@type": "BlogPosting",
             headline: a.title,
-            url: abs(`/${a.slug}`), // ✅ Correction : plus de /blog/
+            url: abs(`/${a.slug}`),
             datePublished: a.date,
           })),
       },
@@ -77,17 +98,35 @@ export function headForRoute(pathname) {
   }
 
   // 3. Page d'article individuel
-  // On extrait le slug (tout ce qui est après le premier /)
   const slug = path.startsWith("/") ? path.substring(1) : path;
   const article = articles.find((a) => a.slug === slug);
 
   if (article) {
+    const isFr = article.lang === "fr";
+    const counterpartSlug = slugTranslations[slug];
+    
+    // ➕ NOUVEAU : Génération des balises hreflang (alternates)
+    const alternates = [];
+    if (counterpartSlug) {
+      // Lien vers la version alternative (EN si on est en FR, FR si on est en EN)
+      alternates.push({
+        hreflang: isFr ? "en" : "fr",
+        href: abs(`/${counterpartSlug}`),
+      });
+      // Lien x-default (indique à Google la version principale, ici le FR)
+      alternates.push({
+        hreflang: "x-default",
+        href: isFr ? canonical : abs(`/${counterpartSlug}`),
+      });
+    }
+
     return {
       ...base,
       title: `${article.title} | ${SITE.name}`,
       description: article.description,
       ogType: "article",
       publishedTime: article.date,
+      alternates, // ➕ NOUVEAU : on retourne le tableau
       jsonld: {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -96,14 +135,14 @@ export function headForRoute(pathname) {
         datePublished: article.date,
         dateModified: article.date,
         image: abs(SITE.defaultImage),
-        inLanguage: "fr-FR",
+        inLanguage: isFr ? "fr-FR" : "en-US", // ✅ CORRECTION : Langue dynamique selon l'article
         author: { "@type": "Organization", name: SITE.name, url: abs("/") },
         publisher: {
           "@type": "Organization",
           name: SITE.name,
           logo: { "@type": "ImageObject", url: abs("/favicon.svg") },
         },
-        mainEntityOfPage: canonical, // ✅ La canonical pointe maintenant sur la bonne URL
+        mainEntityOfPage: canonical,
       },
     };
   }
