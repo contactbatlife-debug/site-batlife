@@ -46,6 +46,87 @@ const articles = [
       { type: "warning", text: "Si le vendeur vous presse de conclure la vente sans essai, ou refuse catégoriquement que vous testiez la batterie, c'est un signal d'alarme majeur. Passez votre chemin." }
     ]
   },
+    {
+    id: "used-ebike-battery-check-en",
+    lang: "en",
+    slug: "check-used-ebike-battery",
+    title: "How to check a used e-bike battery before buying?",
+    description: "Buying a used e-bike battery? Here are the 4 essential tests to check its health and negotiate the right price.",
+    date: "2026-11-28",
+    readTime: 4,
+    category: "Tutorials",
+    icon: "🔍",
+    content: [
+      { type: "p", text: "Buying a used e-bike is a great deal, but the battery often represents 30 to 50% of the bike's value. A worn-out battery can cost more than the savings. Here are 4 concrete steps to avoid unpleasant surprises." },
+      { type: "h2", text: "1. Visual inspection (the signs that don't lie)" },
+      { type: "p", text: "Before even talking about technical specs, observe the casing. Some physical defects are immediate red flags." },
+      { type: "list", items: [
+        "Swelling or deformation of the casing: a sign of damaged cells or internal gas. Walk away.",
+        "Corrosion on the connectors: indicates exposure to moisture and possible circuit oxidation.",
+        "Major impacts or cracks: a violent shock may have damaged the BMS (Battery Management System)."
+      ]},
+      { type: "h2", text: "2. The resting voltage test" },
+      { type: "p", text: "The percentage displayed on the bike's screen is often an unreliable estimate. For a real diagnosis:" },
+      { type: "list", items: [
+        "Let the battery rest for at least 2 hours after charging or use.",
+        "If you have a multimeter, measure the voltage at the terminals.",
+        "A voltage drop that is too fast compared to the manufacturer's specs indicates tired cells."
+      ]},
+      { type: "h2", text: "3. The load test (the truth test)" },
+      { type: "p", text: "A battery can show 100% at rest, but collapse as soon as the motor draws power." },
+      { type: "list", items: [
+        "Take a 10 to 15-minute test ride uphill or with high assistance.",
+        "If the displayed range drops abruptly (e.g., from 80% to 40% in a few minutes), the SoH is likely low.",
+        "Listen to the motor: sudden power cuts betray a BMS protecting weak cells."
+      ]},
+      { type: "h2", text: "4. Your negotiation leverage: tracking history" },
+      { type: "p", text: "Don't just rely on the seller's words. Transparency is key:" },
+      { type: "list", items: [
+        "If the seller uses a battery tracking app: ask them to show you their history or export a certificate. It's proof they actually maintained their battery.",
+        "If they have no tracking: note the condition they claim (e.g., 'used at 80%') and take a first reading yourself before buying, using an app like BatLife.",
+        "If, after a few days of use, the battery drains much faster than expected: you have objective grounds to renegotiate the price or ask for a warranty."
+      ]},
+      { type: "tip", text: "A battery whose seller can prove maintenance via regular tracking is a major trust factor. Conversely, a seller who refuses to let you test the battery should raise a red flag." },
+      { type: "warning", text: "If the seller pressures you to close the deal without a test, or flat out refuses to let you test the battery, it's a major warning sign. Walk away." }
+    ]
+  },
+  {
+    id: "wh-km-consumption-en",
+    lang: "en",
+    slug: "measure-reduce-ebike-wh-km-consumption",
+    title: "Wh/km: how to measure and reduce your e-bike consumption?",
+    description: "Learn to calculate and optimize your Wh/km consumption. Practical tips to extend your e-bike battery range and track it for free with BatLife.",
+    date: "2026-11-28",
+    readTime: 5,
+    category: "Understanding",
+    icon: "⚡",
+    content: [
+      { type: "p", text: "Knowing your actual consumption in Watt-hours per kilometer (Wh/km) is like knowing the liters per 100 km for a car. It's the key indicator to understand your battery's health and adapt your riding style." },
+      { type: "h2", text: "What is Wh/km and how to calculate it?" },
+      { type: "p", text: "Wh/km measures the energy spent to travel one kilometer. An average consumption is between 10 and 15 Wh/km for a well-tuned e-bike. Above 20 Wh/km, there is room for optimization." },
+      { type: "list", items: [
+        "Simple formula: (Battery capacity in Wh × % of battery used) / Distance traveled in km.",
+        "Example: You use 250 Wh to travel 10 km. Your consumption is 25 Wh/km.",
+        "A progressive increase in this figure over several months is often the first sign that your battery's SoH is decreasing."
+      ]},
+      { type: "h2", text: "The 4 factors that skyrocket your consumption" },
+      { type: "list", items: [
+        "Tire pressure: Under-inflated tires increase rolling resistance. Check pressure weekly (the #1 cause of overconsumption).",
+        "Total weight: Every extra kilo (backpack, luggage) demands more energy, especially uphill.",
+        "Riding style: Abrupt starts and braking followed by re-acceleration consume much more than a constant speed.",
+        "Assistance level: Switching from 'Eco' to 'Turbo' mode can instantly double your consumption."
+      ]},
+      { type: "h2", text: "How to measure your actual consumption with BatLife" },
+      { type: "p", text: "It is tedious to do this calculation by hand after every ride. BatLife automates this tracking for you:" },
+      { type: "list", items: [
+        "Enter your data: After your ride, enter the distance and the battery level used in the app.",
+        "Automatic calculation: BatLife instantly calculates your consumption in Wh/km.",
+        "Long-term tracking: Thanks to CSV export, you can track the evolution of your consumption month after month."
+      ]},
+      { type: "tip", text: "Do a consumption test with well-inflated tires and in Eco mode. You will be surprised by the extra range you can gain without changing your battery." },
+      { type: "warning", text: "Do not compare your consumption with others without taking into account the terrain, your weight, and the weather. Compare yourself to yourself on the same route." }
+    ]
+  },
   {
     id: "consommation-wh-km",
     lang: "fr",
@@ -133,6 +214,57 @@ const articles = [
       { type: "p", text: "Une auto-décharge qui augmente au fil des mois peut être un signe de vieillissement : c'est une information précieuse sur l'état réel de votre batterie. En enregistrant régulièrement la tension au repos dans BatLife, vous voyez la tendance sur la durée — bien plus parlant qu'une mesure isolée — et le SoH se calcule cycle après cycle." },
       { type: "tip", text: "Attention au faux diagnostic : si le pourcentage chute brutalement mais que la tension au repos reste bonne, c'est la jauge qui dérive, pas la batterie. Un recalibrage suffit souvent — voir notre guide de calibration." },
     ],
+  },
+    {
+    id: "battery-drains-itself",
+    lang: "en",
+    slug: "ebike-battery-drains-itself",
+    title: "Electric bike battery draining on its own: causes and solutions",
+    description: "Your e-bike battery loses charge when parked? Here's what's normal, what's not, and a simple 48-hour test to tell the difference.",
+    date: "2026-11-17",
+    readTime: 5,
+    category: "Maintenance",
+    icon: "🪫",
+    content: [
+      { type: "p", text: "You leave your bike for a few days and the battery has lost 10, 20 or 30%? Don't panic: some of this loss is perfectly normal. But some drops are abnormal and deserve a diagnosis. Here's how to tell the difference, and what to do in each case." },
+      { type: "h2", text: "What's normal (and what's not)" },
+      { type: "p", text: "A Li-Ion battery is never truly 'at rest': its cells self-discharge slightly, and the bike's electronics (BMS, display, connected lock…) sometimes keep drawing power. Here are the orders of magnitude:" },
+      { type: "list", items: [
+        "2 to 5% per month: natural self-discharge of the cells at room temperature. This is normal.",
+        "5 to 15% per month: consumption by electronics left active (BMS, display, GPS tracker, alarm). Common, and avoidable.",
+        "10% or more in a few days: abnormal. You need to look for a cause, using the method below.",
+        "A rapid loss accompanied by heat, smell or swelling: stop everything and read the safety box."
+      ]},
+      { type: "h2", text: "The most common causes" },
+      { type: "list", items: [
+        "The display left active: on some models, the display keeps drawing power as long as it's clipped on; removing it cuts the power.",
+        "Connected accessories: GPS tracker, connected lock, alarm or lights powered by the main battery, even when the bike is off.",
+        "The bike not truly 'asleep': key left on ON, power button not switched off, controller still powered.",
+        "Cold: a cold battery temporarily shows reduced capacity. This is not a discharge: it 'comes back' at room temperature.",
+        "Wear: tired or unbalanced cells, a BMS that lets a little current leak. The loss worsens over time.",
+        "Moisture on the connectors: oxidation and micro-leakage currents, especially after washing or damp storage."
+      ]},
+      { type: "h2", text: "The simple method: the 48-hour test" },
+      { type: "list", items: [
+        "Charge to 100%, let it rest for 30 minutes, then note the resting voltage (BatLife, expert mode) or the displayed percentage.",
+        "Remove the battery from the bike if it's removable, and store it at room temperature with nothing plugged in.",
+        "Wait 48 hours, then measure again under the same conditions.",
+        "Compare: a loss of 1–2% maximum → the battery is fine, it was the bike drawing power. A loss of 5% or more, with the battery isolated → the battery itself is the cause."
+      ]},
+      { type: "tip", text: "Note the resting voltage rather than the percentage: it's the most reliable measurement. BatLife's Calibration tool converts it into actual charge, and each recorded measurement builds your history." },
+      { type: "h2", text: "Solutions depending on the cause" },
+      { type: "list", items: [
+        "Electronics drawing power: remove the display when parked, disable connected accessories, check the key position.",
+        "Extended parking: remove the battery and store it at around 45% charge, cool and dry — this is exactly the winter storage mode.",
+        "Cold: bring the battery indoors and wait until it returns to room temperature before judging its charge (and before charging it).",
+        "Damp or oxidized connectors: dry them, clean the contacts, store in a dry place.",
+        "Battery at fault (rapid loss even when isolated): have it examined by a professional. Never open an e-bike battery yourself."
+      ]},
+      { type: "warning", text: "A battery that drains very quickly AND heats up, smells of solvent or swells presents a risk of thermal runaway. Do not recharge it, store it outdoors away from any flammable material, and have it examined quickly." },
+      { type: "h2", text: "And what about SoH in all this?" },
+      { type: "p", text: "A self-discharge that increases over the months can be a sign of ageing: it's valuable information about the real state of your battery. By regularly recording the resting voltage in BatLife, you see the trend over time — far more telling than an isolated measurement — and the SoH is calculated cycle after cycle." },
+      { type: "tip", text: "Beware of false diagnoses: if the percentage drops suddenly but the resting voltage remains good, it's the gauge drifting, not the battery. A recalibration is often enough — see our calibration guide." }
+    ]
   },
   {
     id: "duree-vie",
@@ -319,6 +451,191 @@ const articles = [
       { type: "tip", text: "Retrouvez l'explication du calcul directement dans l'app, onglet Coach, et exportez votre certificat PDF depuis l'onglet Stats." },
     ],
   },
+    {
+    id: "lifespan-en",
+    lang: "en",
+    slug: "ebike-battery-lifespan",
+    title: "E-bike battery lifespan: what really wears it out",
+    description: "How many years and cycles can you expect from an e-bike battery? What wears it out daily, signs of wear, and how to delay replacement.",
+    date: "2026-11-16",
+    readTime: 5,
+    category: "Understanding",
+    icon: "⏳",
+    content: [
+      { type: "p", text: "This is the #1 question for e-bike owners, and for good reason: a replacement battery costs between $400 and $900. The good news is that for the same model, lifespan can vary from single to double depending on how you treat it. Here's what you need to know to be on the right side." },
+      { type: "h2", text: "How long does an e-bike battery last?" },
+      { type: "p", text: "Two clocks are ticking in parallel: charge cycles and the calendar. A Li-Ion e-bike battery generally supports 500 to 1,000 full cycles before dropping below 80% of its original capacity, and it ages anyway in 4 to 7 years, even if you rarely ride." },
+      { type: "list", items: [
+        "500 to 1,000 full cycles: the range where most e-bike batteries retain at least 80% of their capacity.",
+        "4 to 7 years: the chemistry also ages at rest (this is 'calendar aging'), even without riding.",
+        "One cycle = 100% cumulative energy, not one plug-in: two 50% charges count as a single cycle.",
+        "80% capacity does not mean 'dead': the battery still works, simply with less range."
+      ]},
+      { type: "tip", text: "BatLife counts your cycles with every recorded charge and estimates your SoH (State of Health) with a confidence index. This way, you know exactly where you stand, rather than guessing." },
+      { type: "h2", text: "What wears it out the fastest" },
+      { type: "list", items: [
+        "Heat: charging or storing in direct sunlight, or in a garage at 95°F (35°C), strongly accelerates aging.",
+        "Staying at 100% for several days in a row: this is the state where Li-Ion chemistry is under the most stress.",
+        "Repeated deep discharges: regularly dropping below 10–15% fatigues the cells.",
+        "Charging in sub-zero temperatures: below 32°F (0°C), irreversible lithium plating occurs.",
+        "An unsuitable charger: incorrect voltage or connectivity, or a low-end charger without reliable cutoff."
+      ]},
+      { type: "warning", text: "The most destructive combination: a battery stored fully charged (100%) in a warm place for weeks. This is typically a bike left in the garage all summer... or poorly stored for winter." },
+      { type: "h2", text: "Signs of a tiring battery" },
+      { type: "list", items: [
+        "Range melts on equal routes: you used to do 60 km, now you do 40.",
+        "The percentage drops abruptly (from 30% to 5% at once): often the gauge drifting, not the battery itself.",
+        "Charging seems faster than before: actual capacity has decreased, so 'full' is reached quicker.",
+        "Cut-outs on hills or during acceleration: the BMS is protecting weak cells."
+      ]},
+      { type: "p", text: "Before concluding the battery is worn out, consider recalibrating the gauge: after months of partial charges, the indicator can display anything while the battery is actually fine. Our calibration guide explains the 4-step method." },
+      { type: "h2", text: "How to extend its lifespan" },
+      { type: "list", items: [
+        "Daily, aim for the 20–80% zone when possible; top up to full just before leaving, not the night before.",
+        "For extended storage, store around 45% charge, cool and dry (50–68°F / 10–20°C).",
+        "Check the voltage every 4 to 6 weeks during storage, and top up if needed.",
+        "Charge at room temperature, never in direct sunlight or in severe cold.",
+        "Always use the original charger or a strictly compatible model."
+      ]},
+      { type: "tip", text: "BatLife's ❄️ Winter Storage mode calculates the target voltage and charging time needed to reach the ideal storage zone for you. See our winter storage guide for the step-by-step." },
+      { type: "h2", text: "When should you replace it?" },
+      { type: "p", text: "There is no expiration date: it all depends on your usage. Below 70–75% SoH, range becomes noticeably reduced; if it no longer covers your daily trips, replacement is worth discussing. Count $400 to $900 depending on capacity, or less with repurposing (cell replacement by a specialist — variable quality, choose an established professional)." },
+      { type: "p", text: "And if you resell your bike, a tracked battery holds its value: BatLife's PDF certificate proves the real maintenance history, which reassures the buyer and defends your price." },
+      { type: "warning", text: "The best habit is to track your battery from day one: record your charges in BatLife, SoH is calculated cycle after cycle, and you always know where your battery stands. Free, no account, and your data stays on your device." }
+    ]
+  },
+  {
+    id: "installation-en",
+    lang: "en",
+    slug: "install-batlife-iphone-android",
+    title: "Installing BatLife on iPhone and Android: the complete guide",
+    description: "BatLife works on iPhone, Android, and desktop. Here's how to install it in under a minute, without going through the App Store.",
+    date: "2026-11-15",
+    readTime: 4,
+    category: "Tutorials",
+    icon: "📱",
+    content: [
+      { type: "p", text: "Good news: BatLife is not reserved for Android. The application works perfectly on iPhone, iPad, and desktop. As it is a Progressive Web App (PWA), it installs directly from your browser in under a minute." },
+      { type: "h2", text: "On iPhone and iPad (iOS)" },
+      { type: "list", items: [
+        "Open Safari (Apple's browser) and go to batlife.app.",
+        "Tap the Share icon (the square with an upward arrow).",
+        "Scroll down the menu and choose 'Add to Home Screen'.",
+        "Confirm with 'Add': the BatLife icon appears on your home screen."
+      ]},
+      { type: "p", text: "You can then launch BatLife like any other app: it opens full screen, with your data kept on the device." },
+      { type: "tip", text: "On iPhone, installation must go through Safari. Chrome and Firefox on iOS do not offer the 'Add to Home Screen' option." },
+      { type: "h2", text: "On Android" },
+      { type: "list", items: [
+        "As a PWA (like on iPhone): open batlife.app in Chrome, then tap the menu ⋮ → 'Install app' or 'Add to Home screen'.",
+        "Or via the Google Play Store: search for BatLife and install the Android app (the same application as the web version)."
+      ]},
+      { type: "h2", text: "On desktop (Windows, Mac, Linux)" },
+      { type: "p", text: "Open batlife.app in Chrome or Edge. Click the install icon in the address bar to add BatLife as an app, or use it directly in the browser." },
+      { type: "h2", text: "Why a web app (PWA)?" },
+      { type: "list", items: [
+        "Lightweight: no heavy download, no account to create.",
+        "Always up to date: updates are automatic, no manual action required.",
+        "100% local data: your history stays on your device, nothing on a server.",
+        "Works offline: your data remains accessible even without a connection.",
+        "Free and ad-free."
+      ]},
+      { type: "warning", text: "Before changing phones, remember to export your BatLife Passport (JSON) from the app to keep your tracking history." },
+      { type: "tip", text: "Once installed, find the ❄️ Winter Storage mode on the home screen to prepare your battery for winter, with estimated charging time." }
+    ]
+  },
+  {
+    id: "calibration-en",
+    lang: "en",
+    slug: "calibrate-ebike-battery",
+    title: "Calibrating your e-bike battery: the complete guide",
+    description: "Why your charge indicator drifts, and how to simply recalibrate it in 4 steps.",
+    date: "2026-11-10",
+    readTime: 5,
+    category: "Tutorials",
+    icon: "🎯",
+    content: [
+      { type: "p", text: "After several months of partial charges, the percentage displayed by your bike may no longer match reality: it drops abruptly from 30% to 5%, or stays stuck at 100% for a long time. It is usually not the battery at fault, but its indicator that needs recalibrating." },
+      { type: "h2", text: "Why the indicator drifts" },
+      { type: "p", text: "The BMS (Battery Management System) estimates the charge by counting the energy going in and out. After many partial cycles, this estimate accumulates a small error. Calibration consists of giving it two reliable reference points again: a full charge and the bottom of the range." },
+      { type: "h2", text: "The step-by-step method" },
+      { type: "list", items: [
+        "Charge the battery to 100%, until the charger cuts off by itself.",
+        "Let it rest for 30 minutes, then note the resting voltage in BatLife (Tools → Calibration).",
+        "Ride normally until about 10–15%, without forcing the discharge.",
+        "Recharge completely in a single go, without interruption."
+      ]},
+      { type: "tip", text: "BatLife's Calibration tool automatically converts the resting voltage into actual percentage, to verify that the gauge is consistent." },
+      { type: "h2", text: "How often?" },
+      { type: "p", text: "A calibration every 20 to 30 cycles is enough, or as soon as the percentage seems inconsistent. No need to do it at every charge: repeated full cycles prematurely wear out the battery." },
+      { type: "warning", text: "Never intentionally drain down to 0%. Stop at the first signs of weakness (power loss, low light). A deep discharge is one of the worst enemies of Li-Ion." }
+    ]
+  },
+  {
+    id: "winter-storage-en",
+    lang: "en",
+    slug: "ebike-battery-winter-storage",
+    title: "Winter storage: how to keep your battery healthy during winter",
+    description: "Charge level, temperature, check frequency: the right habits to find a healthy battery in spring. New: BatLife calculates your winter charging time.",
+    date: "2026-11-14",
+    readTime: 5,
+    category: "Maintenance",
+    icon: "❄️",
+    content: [
+      { type: "p", text: "A battery stored full or empty for several months ages much faster. Winter storage consists of placing it in its comfort state: half-charged, cool and dry, with a small regular check." },
+      { type: "h2", text: "The ideal charge level" },
+      { type: "p", text: "Aim for 40 to 60% charge. In BatLife, the winter storage target is around 45%, which is about 47V at rest for a 48V battery, or 35V for a 36V battery. This is the zone where Li-Ion chemistry is most stable." },
+      { type: "h2", text: "New: Winter Storage mode in charge tracking" },
+      { type: "p", text: "Since the latest update, no need to calculate it yourself: on the home screen, choose the ❄️ Winter Storage mode, then enter your current charge. BatLife immediately displays the target voltage and estimated charging time with your charger." },
+      { type: "list", items: [
+        "Open the home screen and select ❄️ Winter Storage in 'Charge Mode'.",
+        "Enter your voltage (expert mode) or your current percentage.",
+        "Read the target (≈ 45%) and the estimated time, for example '1 h 24'.",
+        "Start tracking: BatLife displays the progress up to the winter storage target."
+      ]},
+      { type: "h2", text: "Temperature and storage location" },
+      { type: "list", items: [
+        "Ideally between 50 and 68°F (10 and 20°C), in a dry place.",
+        "Avoid an uninsulated garage in the middle of winter and direct sunlight behind a window.",
+        "If possible, remove the battery from the bike and store it indoors.",
+        "Keep it away from any flammable material, as a precaution."
+      ]},
+      { type: "h2", text: "Checking during winter" },
+      { type: "p", text: "Check the voltage every 4 to 6 weeks and give it a small top-up if it drops below the target. BatLife automatically alerts you after 33 days without a balancing check." },
+      { type: "tip", text: "Two complementary tools: the ❄️ Winter Storage mode (Home) to charge to the right level with estimated time, and the Winter Diagnostic (Tools) to quickly check if you are in the right zone." },
+      { type: "warning", text: "Never charge a battery whose temperature is below 32°F (0°C). Let it return to room temperature first: charging in the cold causes irreversible lithium plating." }
+    ]
+  },
+  {
+    id: "soh-en",
+    lang: "en",
+    slug: "understand-ebike-battery-soh",
+    title: "Understanding SoH: your battery's health index",
+    description: "What SoH measures, how BatLife estimates it, and why it's useful for reselling your bike.",
+    date: "2026-10-28",
+    readTime: 4,
+    category: "Understanding",
+    icon: "🔋",
+    content: [
+      { type: "p", text: "SoH (State of Health) expresses the actual capacity of your battery compared to its original capacity. An SoH of 90% means it can still store about 90% of the energy of its early days." },
+      { type: "h2", text: "How BatLife estimates it" },
+      { type: "p", text: "BatLife compares the capacity measured during your charge cycles with the nominal capacity of your battery. The more complete and consistent cycles you record, the higher the confidence index (Low / Medium / High). This is an indicative estimate, not a laboratory diagnosis." },
+      { type: "h2", text: "Why it's useful" },
+      { type: "list", items: [
+        "Anticipate replacement: below 70–75% SoH, range becomes noticeably reduced.",
+        "Boost resale value: the PDF tracking certificate proves the real maintenance of the battery.",
+        "Detect abnormal aging: a rapid drop should raise an alert (unsuitable charger, heat, deep discharges)."
+      ]},
+      { type: "h2", text: "Preserving your SoH daily" },
+      { type: "list", items: [
+        "Avoid leaving the battery at 100% for several days in a row.",
+        "Avoid repeated deep discharges below 10–15%.",
+        "Charge at moderate temperatures, never in direct sunlight or in severe cold.",
+        "For long-term storage, keep it around 45% charge."
+      ]},
+      { type: "tip", text: "Find the calculation explanation directly in the app, Coach tab, and export your PDF certificate from the Stats tab." }
+    ]
+  }
 ];
 
 export default articles;
